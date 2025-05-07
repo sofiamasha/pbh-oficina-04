@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo</title>
+    <style>
+        * {
+            font-style: 16px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+    <script>
+        function processar() {
+            var fruta = entrada.value;
+
+            switch (fruta.toLowerCase().trim()) {
+                case "uva":
+                    document.getElementById("resp").innerHTML = "Você escolheu uva.";
+                    document.getElementById("resp").innerHTML += "R$ 14,55.";
+                    break;
+                case "manga":
+                case "maça":
+                case "maca":
+                case "maçã":
+                    document.getElementById("resp").innerHTML = "Você escolheu manga/maçã.";
+                    document.getElementById("resp").innerHTML += "R$ 5,98.";
+                    break;
+                default:
+                    document.getElementById("resp").innerHTML = "Fruta não identificada."
+
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <main>
+        <section class="secao-entrada">
+            <input type="text" id="entrada" placeholder="fruta">
+            <button onclick="processar()">OK</button>
+        </section>
+        <section class="secao-saida">
+            <div id="resp"></div>
+        </section>
+    </main>
+</body>
+
+</html>
